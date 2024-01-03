@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f790bbc6f59f3d841b7f889da023667e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Corporate Logo Rounded ver3
+  fontNames:
+  - Corporate Logo Rounded ver3
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

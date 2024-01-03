@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NotVanillaModulesLib</name>
+    </assembly>
+    <members>
+        <member name="T:NotVanillaModulesLib.NotMemoryConnector">
+            <summary>A <see cref="T:UnityEngine.Behaviour"/> that connects a mod module with the vanilla components for Memory or Who's on First.</summary>
+        </member>
+        <member name="F:NotVanillaModulesLib.NotMemoryConnector.Module">
+            <summary>The type of module that should be instantiated.</summary>
+        </member>
+        <member name="T:NotVanillaModulesLib.NotKeypadConnector">
+            <summary>A <see cref="T:UnityEngine.Behaviour"/> that connects a mod module with the vanilla components for Keypad.</summary>
+        </member>
+        <member name="T:NotVanillaModulesLib.NotKnobConnector">
+            <summary>A <see cref="T:UnityEngine.Behaviour"/> that connects a mod module with the vanilla components for Knob.</summary>
+        </member>
+        <member name="T:NotVanillaModulesLib.TestModel.TestModelWireSpace">
+            <summary>Represents a space for a wire in the test model for Wires, Complicated Wires or Wire Sequence.</summary>
+        </member>
+        <member name="T:NotVanillaModulesLib.ComplicatedWireSpace">
+            <summary>Represents a space for a wire in the Not Complicated Wires module and allows configuration of the associated light and symbol.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.ComplicatedWireSpace.Empty">
+            <summary>Returns or sets a value indicating whether this wire space has no wire.</summary>
+            <remarks>This property should only be set to <c>true</c>. Setting it to <c>false</c> afterward is not supported.</remarks>
+        </member>
+        <member name="P:NotVanillaModulesLib.ComplicatedWireSpace.Cut">
+            <summary>Returns a value indicating whether the wire has been cut.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.ComplicatedWireSpace.LightOn">
+            <summary>Returns or sets a value indicating whether the light is on.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.ComplicatedWireSpace.HasSymbol">
+            <summary>Returns or sets a value indicating whether a star symbol is present.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.ComplicatedWireSpace.Colours">
+            <summary>Returns or sets a value indicating the colours of the wire.</summary>
+            <remarks>Setting this property more than once or setting it when <see cref="P:NotVanillaModulesLib.ComplicatedWireSpace.Empty"/> is <c>true</c> is not supported.</remarks>
+        </member>
+        <member name="M:NotVanillaModulesLib.ComplicatedWireSpace.Activate">
+            <summary>Handles the initial power-up of the module.</summary>
+        </member>
+        <member name="T:NotVanillaModulesLib.ComplicatedWireColours">
+            <summary>Represents a set of colours that can be set to a wire in the Not Complicated Wires module.</summary>
+        </member>
+        <member name="T:NotVanillaModulesLib.NotComplicatedWiresConnector">
+            <summary>A <see cref="T:UnityEngine.Behaviour"/> that connects a mod module with the vanilla components for Complicated Wires.</summary>
+        </member>
+        <member name="M:NotVanillaModulesLib.NotComplicatedWiresConnector.UpdateSelectable">
+            <summary>Sets up selectables in the module after wire states have been initialised.</summary>
+        </member>
+        <member name="T:NotVanillaModulesLib.KeypadButtonEventArgs">
+            <summary>Provides data for the <see cref="!:KeypadEventConnector.ButtonPressed"/> and <see cref="!:KeypadEventConnector.ButtonReleased"/> events.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.KeypadButtonEventArgs.ButtonIndex">
+            <summary>Returns the index of the button that generated the event.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.KeypadButtonEventArgs.StayDown">
+            <summary>If set to true in a <see cref="!:KeypadEventConnector.ButtonPressed"/> event, the button will stay down.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.KeypadButtonEventArgs.SuppressAutomaticRelease">
+            <summary>If set to true in a <see cref="!:KeypadEventConnector.ButtonPressed"/> event, the button will not be automatically released when the animation finishes.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.NotButtonConnector.ShouldOpenCoverOnSelection">
+            <summary>Returns a value indicating whether the vanilla Button module will open the cover on selection or focus. The value is not valid during Awake.</summary>
+        </member>
+        <member name="M:NotVanillaModulesLib.NotCapacitorConnector.Explode">
+            <summary>Causes the capacitor pop effects and stops the sound effect and timer. Does not handle strikes.</summary>
+        </member>
+        <member name="M:NotVanillaModulesLib.NotCapacitorConnector.SetDeathBar(System.Single)">
+            <param name="ratio">The amount to fill the death bar between 0 and 1.</param>
+        </member>
+        <member name="T:NotVanillaModulesLib.NotVanillaModuleConnector">
+            <summary>Connects a Not Vanilla module with the vanilla game's model or the test model.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.NotVanillaModuleConnector.TestMode">
+            <summary>Returns a value indicating whether the test model is being used. The value returned is not valid during Awake.</summary>
+        </member>
+        <member name="F:NotVanillaModulesLib.NotVanillaModuleConnector.moduleID">
+            <summary>A <see cref="T:UnityEngine.GameObject"/> containing the test model, which will be hidden outside test mode. May be null.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.NotVanillaModuleConnector.ModuleID">
+            <summary>Returns the sequential numeric ID for this module, unique within the module type and game instance.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.NotVanillaModuleConnector.KMBombModule">
+            <summary>Returns the <see cref="T:KMBombModule"/> component attached to the GameObject. The value returned is not valid during Awake.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.NotVanillaModuleConnector.KMNeedyModule">
+            <summary>Returns the <see cref="T:KMNeedyModule"/> component attached to the GameObject. The value returned is not valid during Awake.</summary>
+        </member>
+        <member name="M:NotVanillaModulesLib.NotVanillaModuleConnector.AwakeLive">
+            <summary>Attempts to instantiate the game's model for this module.</summary>
+            <exception cref="T:System.TypeLoadException">The game components cannot be loaded because the module is running in the test harness.</exception>
+        </member>
+        <member name="M:NotVanillaModulesLib.NotVanillaModuleConnector.AwakeTest">
+            <summary>Prepares the module for test mode.</summary>
+        </member>
+        <member name="M:NotVanillaModulesLib.NotVanillaModuleConnector.StartLive">
+            <summary>Called by the Unity <see cref="M:NotVanillaModulesLib.NotVanillaModuleConnector.Start"/> method in live mode.</summary>
+        </member>
+        <member name="M:NotVanillaModulesLib.NotVanillaModuleConnector.StartTest">
+            <summary>Called by the Unity <see cref="M:NotVanillaModulesLib.NotVanillaModuleConnector.Start"/> method in test mode.</summary>
+        </member>
+        <member name="M:NotVanillaModulesLib.NotVanillaModuleConnector.Log(System.String)">
+            <summary>Writes the specified message to the log file with a prefix identifying this module.</summary>
+        </member>
+        <member name="M:NotVanillaModulesLib.NotVanillaModuleConnector.Log(System.String,System.Object[])">
+            <summary>Writes the specified message to the log file with a prefix identifying this module.</summary>
+            <seealso cref="M:System.String.Format(System.String,System.Object)"/>
+        </member>
+        <member name="M:NotVanillaModulesLib.NotVanillaModuleConnector.LogError(System.String)">
+            <summary>Writes the specified error message to the log file with a prefix identifying this module.</summary>
+        </member>
+        <member name="T:NotVanillaModulesLib.WireCutEventArgs">
+            <summary>Provides data for the <see cref="!:WireEventConnector.WireCut"/> event.</summary>
+        </member>
+        <member name="P:NotVanillaModulesLib.WireCutEventArgs.WireIndex">
+            <summary>Returns the index of the wire that was cut.</summary>
+        </member>
+    </members>
+</doc>
